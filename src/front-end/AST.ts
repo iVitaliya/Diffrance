@@ -76,12 +76,12 @@ export interface ForStatement extends Statement {
 
 /**  Expressions will result in a value at runtime unlike Statements */
 // deno-lint-ignore no-empty-interface
-export interface Expression extends Statement {}
+export interface Expression extends Statement { }
 
 /**
  * A operation with two sides seperated by a operator.
  * Both sides can be ANY Complex Expression.
- * - Supported Operators -> + | - | / | * | % */
+ * - Supported Operators -> `+` | `-` | `/` | `*` | `%` */
 export interface BinaryExpression extends Expression {
     kind: "BinaryExpr";
     left: Expression;
